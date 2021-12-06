@@ -1,0 +1,28 @@
+.Navbar-height{
+  height: 100px;
+  /* background-color: aqua; */
+    /* width: 50%; */
+}
+.title{
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0px;
+  line-height: 100px;
+}
+.other{
+  margin: 0px;
+  line-height: 100px;
+  text-align: center
+}
+.delPadding{
+  padding: 0px;
+  margin: 0px;
+}
+.signIn{
+  text-align: center;
+  line-height: 36px;
+  margin:30px 0px;
+  height: 40px;
+  width: 120px;
+  border: 2px solid #000000;
+}
