@@ -1,0 +1,32 @@
+.body{
+  /* background-color: antiquewhite; */
+}
+.join{
+  font-size: 100px;
+}
+.content{
+  font-size: 30px;
+}
+.click{
+  margin-top: 50px;
+  width: 300px;
+  height: 50px;
+  border-radius: 25px;
+  border: 2px solid #3F3D56;
+  padding: 10px 20px;
+}
+.input{
+  width: 100%;
+  background:none;
+  outline:none;
+  border:0px;
+}
+.what_female{
+  width: 600px;
+  height: 600px;
+}
+.what_male{
+  width: 800px;
+  height: 800px;
+  margin-top: 100px;
+}

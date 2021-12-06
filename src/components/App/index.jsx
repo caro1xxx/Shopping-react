@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import {BrowserRouter,Link,Route} from 'react-router-dom'
-
+import {BrowserRouter,Link,Route,Switch,Redirect} from 'react-router-dom'
+import Logo from '../../assets/image/Logo.png'
+import What from '../What'
 import Home from '../Home'
 import './index.css'
 class App extends Component {
@@ -9,17 +10,19 @@ class App extends Component {
     return (
       <div>
         <BrowserRouter>
-        <div className="container">
+        <div className="container" style={{boxShadow: '0px 5px 0px #3F3D56'}}>
           <div className="row">
             <div className="col-md-12 ">
               <div className="row Navbar-height">
-                <div className="col-md-2 delPadding">
-                  <p className="title">NavBar</p>
+                <div className='col-md-1'>
+                <a class="navbar-brand" href="#">
+                    <img src={Logo} alt="" width="130" height="80" class="d-inline-block align-text-top"/>
+                </a>
                 </div>
                 <div className="col-md-3 delPadding">
                 </div>
                 <div className="col-md-2 delPadding">
-                  <Link className="other">WAHT IS NAVBAR?</Link>
+                  <Link className="other" to="/what">WAHT IS NAVBAR?</Link>
                 </div>
                 <div className="col-md-1 delPadding">
                   <Link className="other" to="/home">Home</Link>
@@ -35,12 +38,15 @@ class App extends Component {
                     SIGN IN
                   </div>
                 </div>
-                <Route path='/home'component={Home}/>
-                {/* <Route path='/about'component={About}/> */}
               </div>
             </div>
           </div>
         </div>
+        <Switch>
+          <Route path='/what'component={What}/>
+          <Route path='/home'component={Home}/>
+          <Redirect to="/what"/>
+        </Switch>
       </BrowserRouter>
       </div>
     );
