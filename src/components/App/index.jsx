@@ -6,6 +6,8 @@ import What from '../What'
 import Home from '../Home'
 import './index.css'
 class App extends Component {
+
+
   render() {
     return (
       <div>
@@ -15,8 +17,8 @@ class App extends Component {
             <div className="col-md-12 ">
               <div className="row Navbar-height">
                 <div className='col-md-1'>
-                <a class="navbar-brand" href="#">
-                    <img src={Logo} alt="" width="130" height="80" class="d-inline-block align-text-top"/>
+                <a className="navbar-brand" href="#">
+                    <img src={Logo} alt="" width="130" height="80" className="d-inline-block align-text-top"/>
                 </a>
                 </div>
                 <div className="col-md-3 delPadding">
@@ -28,10 +30,10 @@ class App extends Component {
                   <Link className="other" to="/home">Home</Link>
                 </div>
                 <div className="col-md-1 delPadding">
-                  <Link className="other">ABOUT</Link>
+                  <Link className="other" to="/#">ABOUT</Link>
                 </div>
                 <div className="col-md-1 delPadding">
-                  <Link className="other">US</Link>
+                  <Link className="other" to="/#">US</Link>
                 </div>
                 <div className="col-md-2 delPadding d-flex justify-content-end">
                   <div className="signIn">
