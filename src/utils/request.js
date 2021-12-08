@@ -6,13 +6,13 @@ import url from './url'
 // 请求拦截器
 axios.interceptors.request.use(config => {
   if (Object.prototype.toString.call(config.data) !== '[object FormData]') {
-      config.data = qs.stringify(config.data);
+    config.data = qs.stringify(config.data);
   }
   return config
 })
 // 响应拦截器
 axios.interceptors.response.use(response => {
-  if (response.data.code){
+  if (response.data.code) {
     // 根据状态码做反应
     switch (response.data.code) {
       case 200:
@@ -26,15 +26,15 @@ axios.interceptors.response.use(response => {
       case 404:
         break;
     }
-  }else {
+  } else {
     return response
   }
 })
 
 
-//请求商品数据
-function getRequest(url,params) {
-  return axios.get(url,{params})
+//get
+function getRequest(url, params) {
+  return axios.get(url, { params })
 }
 
 
